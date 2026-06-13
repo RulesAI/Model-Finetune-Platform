@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+.env
+.env.local
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+dist/
+build/
+*.tsbuildinfo
+.npm
+
+# Training artifacts (大文件 / 涉密)
+checkpoints/
+logs/
+wandb/
+runs/
+*.bin
+*.safetensors
+*.pt
+*.ckpt
+
+# Training data (涉密)
+data/instructions/*.jsonl
+data/preferences/*.jsonl
+data/test/*.jsonl
+data/raw/**
+!data/raw/.gitkeep
+!data/raw/README.md
+
+# Evaluation outputs
+logs/eval/
+reports/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# OS
+Thumbs.db
+
+# Docker volumes
+volumes/
+
+# Local config overrides
+configs/**/local.yaml
+configs/**/*.local.*
+
+# 客户原始数据/清单等 Office 二进制（涉密，不进 git——见 CLAUDE.md §六数据安全）
+*.docx
+*.xlsx
+*.doc
+*.xls
+*.pptx
+*.ppt
+
+# 派生产物（PDF 由同名 md 生成，不入库）
+*.pdf
